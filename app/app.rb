@@ -14,13 +14,14 @@ set :logging, :true
 set :show_exceptions, true 
 
 use Rack::Session::Pool
-set :session_secret, 'Password!' # TODO Change this to a ENV
+set :session_secret, ENV['SESSION_SECRET']  # TODO Change this to a ENV
+
 
 # TODO add the ability to set the endpoint api after the app has been initilized
 use OmniAuth::Builder do
 	provider :gitlab, ENV["GITLAB_CLIENT_ID"], ENV["GITLAB_CLIENT_SECRET"],
 			client_options: {
-				site: ENV["GITLAB_ENDPOINT"]
+				full_host: ENV["GITLAB_ENDPOINT"]
 			}
 end
 
