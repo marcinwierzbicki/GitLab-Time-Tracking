@@ -2,7 +2,7 @@ tt:
   #image: appstery/gitlab-time-tracking
   build: .
   environment:
-    GITLAB_ENDPOINT: http://git.stermedia.eu
+    GITLAB_ENDPOINT: https://gitlab.com
     GITLAB_CLIENT_ID: qwerty
     GITLAB_CLIENT_SECRET: qwerty
     MONGODB_HOST: mongo
