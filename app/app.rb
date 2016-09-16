@@ -21,7 +21,7 @@ set :session_secret, ENV['SESSION_SECRET']  # TODO Change this to a ENV
 use OmniAuth::Builder do
 	provider :gitlab, ENV["GITLAB_CLIENT_ID"], ENV["GITLAB_CLIENT_SECRET"],
 			client_options: {
-				full_host: ENV["GITLAB_ENDPOINT"]
+				site: ENV["GITLAB_ENDPOINT"]
 			}
 end
 

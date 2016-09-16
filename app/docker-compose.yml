@@ -2,14 +2,14 @@ tt:
   #image: appstery/gitlab-time-tracking
   build: .
   environment:
-    - GITLAB_ENDPOINT="http://gitlab.com"
-    - GITLAB_CLIENT_ID="qwerty"
-    - GITLAB_CLIENT_SECRET="qwerty"
-    - MONGODB_HOST="mongo"
-    - MONGODB_PORT="27017"
-    - MONGODB_DB="GitLab"
-    - MONGODB_COLL="Issues_Time_Tracking"
-    - SESSION_SECRET="qwerty"
+    GITLAB_ENDPOINT: http://git.stermedia.eu
+    GITLAB_CLIENT_ID: qwerty
+    GITLAB_CLIENT_SECRET: qwerty
+    MONGODB_HOST: mongo
+    MONGODB_PORT: 27017
+    MONGODB_DB: GitLab
+    MONGODB_COLL: Issues_Time_Tracking
+    SESSION_SECRET: qwerty
   links:
     - mongo
   command: bundle exec rackup --host 0.0.0.0 -p 80
